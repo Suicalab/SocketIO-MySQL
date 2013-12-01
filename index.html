@@ -1,0 +1,20 @@
+<html>
+
+	<body>
+
+	<input stryle="display:inline;" id="get-news" name="news"></input>
+
+	<script src="node_modules/socket.io/lib/socket.io.sil.js"></script>
+	<script>
+	  var socket = io.connect('http://localhost:8888');
+
+
+	  document.addEventListener('click',function(){
+	  })
+	  	
+	  socket.on('news', function (data) {
+		  	document.getElementById('get-news').value = data.hello.data;
+		});
+	</script>
+	</body>
+</html>
